@@ -1,10 +1,10 @@
-version: '3' 
-services: 
-  vue-app: 
-    build: . 
-    ports: 
-      - "8080:8080"  # Измените на нужный порт, если необходимо
-    environment: 
-      - NODE_ENV=development 
+services:
+  vue-app:
+    image: node:20 # Используем образ Node.js
+    working_dir: /app
     volumes:
-      - .:/app  # Синхронизирует текущую директорию с /app в контейнере
+      - .:/app # Монтируем текущую директорию
+    ports:
+      - "8080:8080" # Пробрасываем порт 8080
+    command: >
+      sh -c "npm install && npm run dev"
