@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import Header from "@/core/components/BaseComponents/Header.vue";
+import Header from "@/core/components/Blocks/Header.vue";
 </script>
 
 <template>
-  <div class="wrapper">
+ 
     <Header />
+  <div class="wrapper">
     <RouterView />
   </div>
 </template>
 
 <style scoped>
-.wrapper{
-  padding: 40px 45px;
-}
+
 </style>
